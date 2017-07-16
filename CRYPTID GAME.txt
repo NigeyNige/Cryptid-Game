@@ -1,0 +1,64 @@
+CRYPTID GAME
+
+A top-down stalking game where you, a monster, have to murder a bunch of plucky teens in the forest before daybreak.
+
+GOAL:
+
+Eat all the teens before time runs out, don't get caught on camera
+
+GAME FLOW:
+
+1) spawn in your lair with your selected cryptid
+2) explore for a little bit until you find the teens (audio & visual cues)
+3) OPTIONAL: explore more and set traps in likely places
+4) make spooky noises to lure teens, isolate them and catch them in your traps
+	-extra points for inciting fear and not being photographed
+	-extra extra points if you drag the teens back to your lair before eating them
+5) you win when all teens are dispatched
+
+CRYPTID ABILITIES:
+
+1) MAKE SPOOKY NOISE
+2) SET TRAP
+3) INCAPACITATE TEEN
+4) DRAG INCAPACITATED TEEN
+5) EAT INCAPACITATED TEEN
+
+-you can incite fear by being glimpsed, being fully seen when the teen has no camera, and making spooky noises
+
+TEEN ABILITIES:
+
+1) TAKE PHOTOGRAPH
+2) SHOUT (cry out/warn others)
+3) SPRINT
+	4) START FIRE? (nice-to-have)
+	
+TEEN BEHAVIOURS:
+
+1) IDLE (around the campfire, for example)
+	a) run non-random timer, look around at set intervals
+		i) if noise detected, goto INVESTIGATE
+		ii) if cryptid glimpsed, goto INVESTIGATE
+		iii) if cryptid seen, goto PHOTOGRAPH
+
+2) INVESTIGATE (source of spooky noise/shout)
+	a) move towards source of noise
+		i) if cryptid is spotted, if fear is below set threshold, PHOTOGRAPH, else, FLEE
+
+3) PHOTOGRAPH
+	a) raise camera with short delay, then photograph cryptid
+		i) if raycast to cryptid is blocked by SOLID OBJECT, then photograph fails
+		ii) if raycast to cryptid is blocked by PARTIAL COVER, then photograph is blurry
+		iii) if raycast to cryptid is not blocked, then GAME OVER
+
+4) FLEE
+	a) run in opposite direction to cryptid for X distance, then LOOK FOR FRIENDS
+	
+5) LOOK FOR FRIENDS
+	a) orient self in general direction of friends (45 degree radius, chance to miss completely)
+	b) set destination correct distance to friends, + or - 10 metres so teen will eventually, probably make it to friends
+		i) if see another teen, move to near them and IDLE.
+
+6) INCAPACITATED
+	a) wiggle and make quiet noises
+
