@@ -5,6 +5,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	[RequireComponent(typeof(Rigidbody))]
 	[RequireComponent(typeof(CapsuleCollider))]
 	[RequireComponent(typeof(Animator))]
+
 	public class ThirdPersonCharacter : MonoBehaviour
 	{
 		[SerializeField] float m_MovingTurnSpeed = 360;
@@ -28,7 +29,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		Vector3 m_CapsuleCenter;
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
-
 
 		void Start()
 		{
@@ -150,6 +150,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// don't use that while airborne
 				m_Animator.speed = 1;
 			}
+
 		}
 
 

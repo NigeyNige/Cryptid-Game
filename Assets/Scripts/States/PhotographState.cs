@@ -54,6 +54,7 @@ public class PhotographState : State {
 
 	public void TakePhoto()
 	{
+		GameObject.Instantiate(character.CameraFlash, character.CameraFlashSpawnPoint.position, Quaternion.identity);
 		//Debug.Log(character.name + " taking photo.");
 		if (character.Vision.canSeePlayer)	//TODO: have a separate camera vision cone and visually communicate it to the player?
 		{

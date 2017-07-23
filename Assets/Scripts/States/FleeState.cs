@@ -30,6 +30,7 @@ public class FleeState : State {
 			{
 				//this should be lookforfriends instead of idle
 				character.SetState(new LookForFriendsState(character));
+				character.AddFear();
 
 				//TODO: if can't flee any further, cower
 			}

@@ -28,6 +28,9 @@ namespace UnityStandardAssets.Cameras
 		private Quaternion m_PivotTargetRot;
 		private Quaternion m_TransformTargetRot;
 
+		public bool YValueLocked;		//Allows you to lock the Y value to something.
+		public float LockedYValue;	//Lock the Y value to something, to prevent player looking up and down
+
         protected override void Awake()
         {
             base.Awake();
@@ -92,7 +95,14 @@ namespace UnityStandardAssets.Cameras
             else
             {
                 // on platforms with a mouse, we adjust the current angle based on Y mouse input and turn speed
-                m_TiltAngle -= y*m_TurnSpeed;
+				if (!YValueLocked)
+				{
+                	m_TiltAngle -= y*m_TurnSpeed;	//Nige added this if condition to allow locking of the y value, disabling vertical mouse look
+				}
+				else
+				{
+					m_TiltAngle = LockedYValue;
+				}
                 // and make sure the new value is within the tilt range
                 m_TiltAngle = Mathf.Clamp(m_TiltAngle, -m_TiltMin, m_TiltMax);
             }

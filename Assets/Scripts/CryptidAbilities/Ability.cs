@@ -3,5 +3,5 @@ using System.Collections;
 
 public abstract class Ability : MonoBehaviour {
 
-	public abstract void OnUse();
+	public abstract void OnUse(GameObject Target);
 }

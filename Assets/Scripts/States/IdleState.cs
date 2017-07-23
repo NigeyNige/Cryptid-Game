@@ -13,7 +13,7 @@ public class IdleState : State {
 		if (character.Vision.canSeePlayer)
 		{
 			//jump up the fear if the cryptid is spotted
-			character.CurrentFear += 10f;
+			character.JumpScare(10f);	//jumpscare because the teen is going from relaxed to investigate and this line will only fire once
 			character.SetState(new InvestigateState(character, character.Vision.PointOfInterest.transform));
 		}
 	}

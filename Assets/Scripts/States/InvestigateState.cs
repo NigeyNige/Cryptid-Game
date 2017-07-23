@@ -31,7 +31,7 @@ public class InvestigateState : State {
 			else
 			{
 				InvestigateTimeOut -= Time.deltaTime;
-				character.CurrentFear += Time.deltaTime * 1f;
+				character.AddFear();
 				//what to do while standing there having reached the suspicious area?
 			}
 		}
@@ -40,7 +40,7 @@ public class InvestigateState : State {
 		if (character.Vision.canSeePlayer)
 		{
 			//tick fear up if the cryptid's in view
-			character.CurrentFear += Time.deltaTime * 2f;
+			character.AddFear();
 
 			//if the fear is above the fear threshold, flee!
 			if (character.CurrentFear > character.FearThreshold_Flee)

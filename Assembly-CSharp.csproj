@@ -45,24 +45,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Character.cs" />
-     <Compile Include="Assets\Scripts\Cryptid.cs" />
+     <Compile Include="Assets\Scripts\Characters\Character.cs" />
+     <Compile Include="Assets\Scripts\Characters\Cryptid.cs" />
+     <Compile Include="Assets\Scripts\Characters\TeenRagdoll.cs" />
+     <Compile Include="Assets\Scripts\Characters\Vision.cs" />
      <Compile Include="Assets\Scripts\CryptidAbilities\Ability.cs" />
+     <Compile Include="Assets\Scripts\CryptidAbilities\Ability_DragTeen.cs" />
+     <Compile Include="Assets\Scripts\CryptidAbilities\Ability_EatTeen.cs" />
      <Compile Include="Assets\Scripts\CryptidAbilities\Ability_Incapacitate.cs" />
      <Compile Include="Assets\Scripts\CryptidAbilities\Ability_MakeNoise.cs" />
-     <Compile Include="Assets\Scripts\Forest.cs" />
-     <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\Noise.cs" />
-     <Compile Include="Assets\Scripts\State.cs" />
+     <Compile Include="Assets\Scripts\Objects\Interactable.cs" />
+     <Compile Include="Assets\Scripts\Objects\Noise.cs" />
      <Compile Include="Assets\Scripts\States\FleeState.cs" />
      <Compile Include="Assets\Scripts\States\IdleState.cs" />
      <Compile Include="Assets\Scripts\States\IncapacitatedState.cs" />
      <Compile Include="Assets\Scripts\States\InvestigateState.cs" />
      <Compile Include="Assets\Scripts\States\LookForFriendsState.cs" />
      <Compile Include="Assets\Scripts\States\PhotographState.cs" />
-     <Compile Include="Assets\Scripts\Vision.cs" />
+     <Compile Include="Assets\Scripts\States\State.cs" />
+     <Compile Include="Assets\Scripts\WorldControls\Forest.cs" />
+     <Compile Include="Assets\Scripts\WorldControls\GameController.cs" />
+     <Compile Include="Assets\Yurowm\Demo\Scripts\Actions.cs" />
+     <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterPanel.cs" />
+     <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterViewer.cs" />
+     <Compile Include="Assets\Yurowm\Demo\Scripts\PlayerController.cs" />
+     <None Include="Assets\Day-Night Skyboxes\readme.txt" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+     <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
+     <None Include="Assets\Day-Night Skyboxes\Textures\Readme for Assigning.txt" />
+     <None Include="Assets\Alien\ALien Info.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
